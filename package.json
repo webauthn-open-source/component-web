@@ -34,5 +34,9 @@
     "mockery": "^2.0.0",
     "sinon": "^1.17.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.2",
+    "simple-component-manager": "^0.8.0",
+    "fido2-server-component-certs": "^0.0.1"
+  }
 }
