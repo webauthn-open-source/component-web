@@ -1,26 +1,27 @@
 {
-  "name": "fido2-server-component-web",
-  "version": "0.0.1",
-  "description": "A FIDO2 / WebAuthn server component for serving up webpages",
+  "name": "component-web",
+  "version": "0.8.0",
+  "description": "A component for serving up webpages",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover _mocha",
     "docs": "jsdoc -c ./.jsdoc-conf.json",
-    "publish": "istanbul-coveralls && gh-pages --silent --repo https://$GH_TOKEN@github.com/apowers313/fido2-server-component-web.git --dist docs"
+    "publish": "istanbul-coveralls && gh-pages --silent --repo https://$GH_TOKEN@github.com/apowers313/component-web.git --dist docs"
   },
   "keywords": [
-    "fido2",
-    "webauthn",
-    "server"
+    "component",
+    "web",
+    "http",
+    "https"
   ],
   "author": "Adam Powers",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/apowers313/fido2-server-component-web"
+    "url": "https://github.com/apowers313/component-web"
   },
   "bugs": {
-    "url": "https://github.com/apowers313/fido2-server-component-web/issues",
+    "url": "https://github.com/apowers313/component-web/issues",
     "email": "apowers@ato.ms"
   },
   "devDependencies": {
@@ -36,7 +37,6 @@
   },
   "dependencies": {
     "express": "^4.16.2",
-    "simple-component-manager": "^0.8.0",
-    "fido2-server-component-certs": "^0.0.1"
+    "component-class": ">=0.8.0"
   }
 }
