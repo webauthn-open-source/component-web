@@ -1,12 +1,11 @@
 {
   "name": "component-web",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A component for serving up webpages",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover _mocha",
-    "docs": "jsdoc -c ./.jsdoc-conf.json",
-    "publish": "istanbul-coveralls && gh-pages --silent --repo https://$GH_TOKEN@github.com/apowers313/component-web.git --dist docs"
+    "docs": "jsdoc -c ./.jsdoc-conf.json"
   },
   "keywords": [
     "component",
