@@ -36,7 +36,8 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
+    "component-class": "/Users/apowers/Projects/components/component-class",
     "express": "^4.16.2",
-    "component-class": "^0.9.2"
+    "express-session": "^1.15.6"
   }
 }

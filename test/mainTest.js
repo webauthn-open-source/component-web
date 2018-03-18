@@ -26,7 +26,7 @@ var dummyLogger = {
         return new Proxy(function() {}, {
             get: function() {
                 return function(...msg) {
-                    if(turnOnDebugLogging) console.log(...msg);
+                    if (turnOnDebugLogging) console.log(...msg);
                 };
             },
         });
@@ -290,14 +290,43 @@ describe("web component routes", function() {
             });
     });
 
+    it("can get port", function() {
+        var ret = wc.getPort();
+        assert.isUndefined(ret);
+        wc.setPort(7777);
+        ret = wc.getPort();
+        assert.isNumber(ret);
+        assert.strictEqual(ret, 7777);
+    });
+
     it("throws if setting port after server started", function() {
         wc.init();
         assert.throws(function() {
             wc.setPort(7777);
-        }, Error);
-
+        }, Error, "can't set port after server has started");
     });
+
     it("throws on bad port number");
+
+    it("can set domain", function() {
+        wc.setDomain("example.com");
+    });
+
+    it("can get domain", function() {
+        var ret = wc.getDomain();
+        assert.isUndefined(ret);
+        wc.setDomain("example.com");
+        ret = wc.getDomain();
+        assert.strictEqual(ret, "example.com");
+    });
+
+    it("throws if setting domain after server started", function() {
+        wc.init();
+        assert.throws(function() {
+            wc.setDomain("example.com");
+        }, Error, "can't set domain after server has started");
+    });
+
 
     it("can set https", function(done) {
         this.slow(150);
@@ -315,9 +344,31 @@ describe("web component routes", function() {
             .get("/index.html")
             .expect(200, "<html>hi</html>")
             .end(function(err) {
-                if(err) throw err;
+                if (err) throw err;
                 done();
             });
     });
+
+    it("can get protocol", function() {
+        wc.addStatic({
+            path: "/",
+            dir: "test/helpers/static"
+        });
+        var ret = wc.getProtocol();
+        assert.strictEqual(ret, "http");
+
+        wc.setHttps(true);
+        ret = wc.getProtocol();
+        assert.strictEqual(ret, "https");
+    });
+
+    it("https throws if called after init");
     it("can run two instances at the same time");
+
+    it("can set body parser to JSON");
+    it("can set body parser to raw");
+    it("can set body parser to text");
+    it("can set body parser to url encoded");
+    it("throws if POST and no body parser (?)");
+    it("can set session");
 });
