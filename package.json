@@ -38,6 +38,7 @@
   "dependencies": {
     "component-class": "/Users/apowers/Projects/components/component-class",
     "express": "^4.16.2",
-    "express-session": "^1.15.6"
+    "express-session": "^1.15.6",
+    "helmet": "^3.12.0"
   }
 }

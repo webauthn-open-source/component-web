@@ -1,3 +1,5 @@
+"use strict";
+
 var turnOnDebugLogging = false;
 
 var WebComponent = require("../index.js");
