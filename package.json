@@ -1,6 +1,6 @@
 {
   "name": "component-web",
-  "version": "0.9.1",
+  "version": "1.0.0-alpha1",
   "description": "A component for serving up webpages",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "component-class": "/Users/apowers/Projects/components/component-class",
+    "component-class": "1.0.0-alpha1",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "helmet": "^3.12.0"
