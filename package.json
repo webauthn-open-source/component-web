@@ -1,6 +1,6 @@
 {
   "name": "component-web",
-  "version": "1.0.0-alpha1",
+  "version": "1.0.0-alpha2",
   "description": "A component for serving up webpages",
   "main": "index.js",
   "scripts": {
