@@ -1,1 +1,3 @@
-Work in progress. Do not use.
+[![Build Status](https://travis-ci.org/apowers313/component-web.svg?branch=master)](https://travis-ci.org/apowers313/component-web) [![Coverage Status](https://coveralls.io/repos/github/apowers313/component-web/badge.svg)](https://coveralls.io/github/apowers313/component-web) [![Known Vulnerabilities](https://snyk.io/test/github/apowers313/component-web/badge.svg?targetFile=package.json)](https://snyk.io/test/github/apowers313/component-web?targetFile=package.json)
+
+Documentation coming soon.
